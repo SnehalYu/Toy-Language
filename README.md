@@ -11,24 +11,37 @@ This repository contains the second part of the **CS F363 Compiler Construction*
 
 ```
 Toy-Language/
-├── syntax_analysis/
-│   ├── Makefile
-│   ├── toy.y      # Bison grammar file
-│   ├── toy.l      # Flex lexer file
-│   └── ...
-│
-├── ast_generation/
-│   ├── Makefile
-│   ├── toy.y      # Extended Bison file with AST generation
-│   ├── toy.l
-│   └── ...
-│
-├── test_cases/
-│   ├── input1.txt
-│   └── ...
-│
-├── group_info.pdf # Contains BITS ID, name, and email ID of group members
+├── ast.c
+├── ast.h
+├── final.l
+├── final.tab.c
+├── final.tab.h
+├── final.y
+├── input.txt
+├── Makefile
+├── symbtab.c
+├── Testcase1.txt
 └── README.md
+```
+
+---
+## 🏁 How to Run
+
+You can compile and run the interpreter with a single command:
+
+```bash
+make run
+```
+
+This will:
+1. Use `flex` and `bison` to build the parser and lexer
+2. Compile the code
+3. Run the executable on the default input file (usually `input1.toy`)
+
+To run with a **custom file**:
+
+```bash
+./a.out input.txt
 ```
 
 ---
